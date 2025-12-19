@@ -25,6 +25,28 @@ You need a working Rust environment (Cargo) installed.
    cargo run -- file.txt
    ```
 
+2. For global access:
+    ```bash
+    sudo mv target/debug/fasttype_v2 /usr/local/bin/
+    ```
+
+3. For integration with [mystore](https://github.com/KJCats247/fasttype-rust):
+   ```bash
+   fasttype_v2 "$(mystore --path "$1")"
+    ```
+    or in .bashrc/.zshrc
+   ```bash
+   function fasttype() {
+        local path=$(mystore --path "$1")
+    
+        if [ $? -eq 0 ]; then
+            fasttype_v2 "$path"
+        else
+            return 1
+        fi
+   }
+    ```
+
 ## Built With
 
 - Ratatui - Library for cooking up Terminal User Interfaces
