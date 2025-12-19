@@ -6,17 +6,14 @@ use ratatui::widgets::Paragraph;
 use ratatui::text::{Line, Span};
 use ratatui::style::{Style, Color};
 use ratatui::layout::{Layout, Constraint, Direction};
-use std::fs; // NEU: Wir brauchen fs für file system Zugriff
+use std::fs;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let filepath: String = std::env::args().nth(1).expect("No Filepath given!");
     let text = std::fs::read_to_string(&filepath).expect("Invalid File!");
 
-    // NEU 1: Pfad für die Speicherdatei definieren
     let save_path = format!("{}.save", filepath);
 
-    // NEU 2: Versuchen, den Spielstand zu laden
-    // Wenn die Datei existiert, nehmen wir ihren Inhalt. Wenn nicht, starten wir leer.
     let mut user_input = fs::read_to_string(&save_path).unwrap_or_else(|_| String::new());
 
     enable_raw_mode().expect("Could not enable raw mode");
@@ -113,8 +110,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     .alignment(ratatui::layout::Alignment::Center);
                 frame.render_widget(p_done, vertical_layout[2]);
                 
-                // Optional: Wenn man fertig ist, Speicherdatei löschen?
-                // fs::remove_file(&save_path).ok(); 
             }
 
         })?;
@@ -122,8 +117,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         match read() {
             Ok(Event::Key(key)) if key.kind == KeyEventKind::Press => match key.code {
                 KeyCode::Esc => {
-                    // NEU 3: Speichern beim Beenden
-                    // Wir schreiben alles, was in user_input ist, in die Datei.
                     fs::write(&save_path, &user_input).expect("Could not save progress!");
                     break;
                 },
