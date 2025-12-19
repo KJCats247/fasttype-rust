@@ -20,7 +20,7 @@ You need a working Rust environment (Cargo) installed.
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/KJCats247/fasttype-rust.git](https://github.com/YOUR_USERNAME/fasttype-rust.git)
+   git clone https://github.com/KJCats247/fasttype-rust.git
    cd fasttype-rust
    cargo run -- file.txt
    ```
