@@ -9,7 +9,7 @@ Designed for a distraction-free experience with typewriter scrolling and focus m
 - **Real-time Feedback:** Instant visual feedback for correct (green) and incorrect (red) characters.
 - **Auto-Save:** Your progress is automatically saved to a `.save` file.
 
-## Known-Bugs
+## Known Bugs
 
 It sometimes can happen, that zou write below the gray text, not on it. Simply continue
 to write to the next line, exit and restart the application. It should fix itself.
