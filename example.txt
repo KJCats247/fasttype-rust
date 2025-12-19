@@ -1,0 +1,15 @@
+Press ENTER at the end of each line to jump to the next one!
+Welcome to FastType.
+This is a small test file to show you what this tool can do.
+You are currently in "Focus Mode".
+This means the line you are typing always stays right in the center.
+The text also shifts horizontally so your eyes never have to search.
+Try making a typo: The character will turn red.
+If you type correctly, the text turns a beautiful green.
+A key feature is saving:
+Need to go? Just press the ESC key.
+The program will quit and remember exactly where you left off.
+Next time you start, you can continue right from there.
+Have fun typing and getting faster!
+
+PS. There will be a WPS and accuracy stat in the future, so stay tuned.
