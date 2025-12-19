@@ -30,7 +30,7 @@ You need a working Rust environment (Cargo) installed.
     sudo mv target/debug/fasttype_v2 /usr/local/bin/
     ```
 
-3. For integration with [mystore](https://github.com/KJCats247/fasttype-rust):
+3. For integration with [mystore](https://github.com/KJCats247/mystore):
    ```bash
    fasttype_v2 "$(mystore --path "$1")"
     ```
