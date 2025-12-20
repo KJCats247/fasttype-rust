@@ -11,8 +11,15 @@ Designed for a distraction-free experience with typewriter scrolling and focus m
 
 ## Known Bugs
 
-It sometimes can happen, that zou write below the gray text, not on it. Simply continue
+It sometimes can happen, that you write below the gray text, not on it. Simply continue
 to write to the next line, exit and restart the application. It should fix itself.
+
+## TODO
+
+- Fix Off by One bug
+- Add WPS
+- Add accuracy
+- Add flags to turn turn on WPS and/or accuracy
 
 ## Installation & Usage
 
